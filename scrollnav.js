@@ -1,9 +1,9 @@
 $(function() {
 
-	// 生成菜单
-	var html = '';
+    // 生成菜单
+    var html = '';
     $('h1, h2, h3').each(function(i){
-    	$(this).attr('id', 'article-header' + i);
+        $(this).attr('id', 'article-header' + i);
         html += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a></li>';
     });
     $('.post-nav ul.article-index').append(html);

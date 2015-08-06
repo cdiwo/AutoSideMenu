@@ -15,22 +15,22 @@
 .post-nav .nav-body { position: relative; border-left: 3px solid #ddd; }
 .post-nav .highlight-title {
     position: absolute;
-  	display: block;
-  	left: 0;
-  	right: 0;
-  	height: 30px;
-  	background: #eee;
-  	margin-left: -3px;
-  	z-index: 1;
-  	border-left: 3px solid #009A61;
-  	-moz-transition: all 0.2s ease;
-  	-o-transition: all 0.2s ease;
-  	-webkit-transition: all 0.2s ease;
-  	transition: all 0.2s ease;
+    display: block;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: #eee;
+    margin-left: -3px;
+    z-index: 1;
+    border-left: 3px solid #009A61;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 .post-nav .article-index {
-  	position: relative;
-  	z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 .post-nav ul { padding-left: 10px; }
 .post-nav ul>li { line-height: 30px; }
