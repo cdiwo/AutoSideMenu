@@ -1,7 +1,7 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .container { width: 1200px; margin:0 auto; }
 .col-9, .col-3 { position: relative; float: left; }
@@ -14,7 +14,7 @@
 .post-nav .nav-head { font-weight: bold; font-size: 16px; }
 .post-nav .nav-body { position: relative; border-left: 3px solid #ddd; }
 .post-nav .highlight-title {
-	position: absolute;
+    position: absolute;
   	display: block;
   	left: 0;
   	right: 0;
@@ -36,7 +36,7 @@
 .post-nav ul>li { line-height: 30px; }
 .post-nav ul>li.active a { color: black;}
 .post-nav ul>li a {
-	text-decoration: none;
+    text-decoration: none;
     display: block;
     overflow: hidden;
     white-space: nowrap;
