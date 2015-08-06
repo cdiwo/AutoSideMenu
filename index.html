@@ -4,114 +4,27 @@
 	<meta charset="UTF-8">
 	<title>滚动菜单</title>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<style type="text/css">
-		.container { width: 1200px; margin:0 auto; }
-		.article { width: 66.666666666%; float: left; }
-		.side { width: 33.333333333%; float: left; position: relative; }
-		.fixed { position: fixed; top: 0; }
-		.post-nav { width: 150px} 
-		.post-nav .nav-head { font-weight: bold; font-size: 16px; }
-		.post-nav .nav-body {
-		  	position: relative;		  	
-		    border-left: 3px solid #ddd;
-		}
-		.post-nav .highlight-title {
-			position: absolute;
-		  	display: block;
-		  	left: 0;
-		  	right: 0;
-		  	height: 30px;
-		  	background: #eee;
-		  	margin-left: -3px;
-		  	z-index: 1;
-		  	border-left: 3px solid #009A61;
-		  	-moz-transition: all 0.2s ease;
-		  	-o-transition: all 0.2s ease;
-		  	-webkit-transition: all 0.2s ease;
-		  	transition: all 0.2s ease;
-		}
-		.post-nav .articleIndex {
-		  	position: relative;
-		  	z-index: 2;
-		}
-		.post-nav ul {			
-		    padding-left: 10px;
-		}
-		.post-nav ul>li {
-		    line-height: 30px;
-		}
-
-		.post-nav ul a {
-			text-decoration: none;
-		    display: block;
-		    overflow: hidden;
-		    white-space: nowrap;
-		    text-overflow: ellipsis;
-		}
-		.post-nav ul a:link {
-		    color: #777;
-		}
-		.post-nav ul a:visited {
-		    color: #626262;
-		}
-		.post-nav ul a:hover {
-		    text-decoration: none;
-		    color: #3189f3;
-		}
-
-		.post-nav ul>li.active a { color: black;}
-
-	</style>
-	<script type="text/javascript">
-		$(function(){
-			var html = "";
-	        $('h1, h2, h3').each(function(){
-	            html += '<li><a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a></li>';
-	        });
-	        $('.post-nav ul.articleIndex').append(html);
-
-	        var articleHead = $('.article').find('h1, h2, h3');
-	        var highlightTitle = $('.post-nav .highlight-title');
-
-	        $(window).scroll(function() {
-	            var scrollTop = $(this).scrollTop();
-
-	            if(articleHead.eq(0).offset().top - scrollTop < 40) {
-	                highlightTitle.show()
-	                var index = 0;
-	                articleHead.each(function(i) {
-	                    // 计算接近移动到头部隐藏区域的元素
-	                    if(scrollTop + 20  > articleHead.eq(i).offset().top) {
-	                        index = i;
-	                    }
-	                });
-
-	                $('.articleIndex li').eq(index).addClass('active').siblings().removeClass('active');
-	                highlightTitle.css('top', index * 30);
-	            } else {
-	                $(".articleIndex li").removeClass("active");
-	                highlightTitle.hide();
-	            }
-	        });
-		});
-	</script>
+	<link rel="stylesheet" href="scrollnav.css">
+	<script src="scrollnav.js"></script>
 </head>
-<body>
+<body style="background: #f6f6f6;">
 	<div class="container">
-		<div class="side">
-			<p>1</p>
-			<p>2</p>
-			<p>3</p>
-			<div class="post-nav fixed">
-				<div class="nav-head">文章目录</div>
-				<div class="nav-body">
-					<div class="highlight-title"></div>
-					<ul class="articleIndex">
-					</ul>
+		<div class="col-3">
+			<div class="side">
+				<p>段落一</p>
+				<p>段落二</p>
+				<p>段落三</p>
+				<div class="post-nav fixed">
+					<div class="nav-head">文章目录</div>
+					<div class="nav-body">
+						<div class="highlight-title"></div>
+						<ul class="article-index">
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="article">
+		<div class="col-9 article">
 			<h1>滚动菜单</h1>
 
 			<h2>标题1</h2>
