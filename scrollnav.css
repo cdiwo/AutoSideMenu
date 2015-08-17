@@ -10,7 +10,7 @@
 .article { float: left; background: #fff; }
 .side { float: left; background: #fff; width: 100%; padding: 0 15px;}
 .fixed { position: fixed; top: 0; }
-.post-nav { width: 150px} 
+.post-nav { width: 240px; background-color:white;} 
 .post-nav .nav-head { font-weight: bold; font-size: 16px; }
 .post-nav .nav-body { position: relative; border-left: 3px solid #ddd; }
 .post-nav .highlight-title {
@@ -28,11 +28,7 @@
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-.post-nav .article-index {
-    position: relative;
-    z-index: 2;
-}
-.post-nav ul { padding-left: 10px; }
+.post-nav ul { position: relative; z-index: 2; padding-left: 10px; }
 .post-nav ul>li { line-height: 30px; }
 .post-nav ul>li.active a { color: black;}
 .post-nav ul>li a {
